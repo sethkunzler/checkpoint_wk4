@@ -10,8 +10,8 @@ export const router = new Router([
     view: `app/views/HomeView.html`
   },
   {
-    path: '#/about',
-    view: 'app/views/AboutView.html'
+    path: '#/profile',
+    view: 'app/views/ProfileView.html'
   },
   {
     path: '#/account',
