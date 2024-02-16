@@ -16,53 +16,70 @@
 </head>
 
 <body>
-  <!-- SECTION -->
-  <header>
-    <nav class="navbar navbar-dark navbar-expand px-2">
-      <p role="button" class="selectable" title="should bring up informaton on the author and be clickable to display a new image">Author of the Image</p>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="true" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <!-- NAVLINKS -->
-          
-        </div>
+
+  <header class="m-0 p-0">
+    <nav class=" m-0 p-0 text-light d-flex justify-content-between text-align-center">
+      <div class="m-0">
+        <p class="misty py-6 px-4" >
+          <span role="button" class="selectable rounded fs-5 p-1" title="click to copy the image source link">Author of the Image</span> 
+          <br><span roll="button" class="selectable rounded p-2 small" title="click to change background">>> New Background Image</span>
+        </p>
       </div>
-      <div class="flex-grow-1 justify-content-end align-items-center d-flex" id="authstate"></div>
+      <div class="misty selectable">
+        <p class="align-bottom fs-5 pt-2">>> 3 Todos remaining</p>
+      </div>
     </nav>
   </header>
 
-  <!-- SECTION -->
-  <main>
+  <main >
 
-    <section id="router-view">
+    <section id="router-view" class="router-view">
       <!-- primary viewport -->
     </section>
-    <a href="#/profile" class="nav-link">Profile</a>
   </main>
 
-  <!-- SECTION -->
-  <footer class="bg-dark text-light">
-    <div class="text-center no-select">
-      <p class="mb-0"><small>Made with 💖 by CodeWorks</small></p>
+  <footer class="misty text-light text-shadow">
+    <div class="container">
+      <div class="row mb-1 d-flex justify-content-between text-center align-items-center">
+        <div class="col-md-4">
+          <div role="button" id="weatherObject" class="selectable rounded d-flex align-items-center">
+            <div class="p-2 align-items-center p-2">
+              <p class="mb-0">Sunny</p>
+              <p>37° C</p>
+            </div>
+            <span class="mdi mdi-white-balance-sunny display-4"></span>
+          </div>
+        </div>
+        <div id="timeObject" class="col-md-4 selectable rounded" role="button">
+          <h1 class="p-1">24:60:60 p.m.</h1>
+          <p>Location</p>
+        </div>
+        <div class="col-md-4 d-flex align-items-center justify-content-between">
+          <a href="#/profile" class="selectable rounded p-3 text-light">
+            <span role="link" class="mdi mdi-tune-variant display-5" title="User Settings"></span>
+          </a>
+          <div class="justify-content-end align-items-center d-flex" id="authstate"></div>
+        </div>
+      </div>
     </div>
   </footer>
 
+  <!-- #region script tags-->
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="https://cdn.auth0.com/js/auth0-spa-js/1.22/auth0-spa-js.production.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/jakeoverall/auth0provider-client/browser/Auth0Provider.js"></script>
   <script src="https://cdn.socket.io/4.1.1/socket.io.min.js"
-    integrity="sha384-cdrFIqe3RasCMNE0jeFG9xJHog/tgOVC1E9Lzve8LQN1g5WUHo0Kvk1mawWjxX7a"
-    crossorigin="anonymous"></script>
+  integrity="sha384-cdrFIqe3RasCMNE0jeFG9xJHog/tgOVC1E9Lzve8LQN1g5WUHo0Kvk1mawWjxX7a"
+  crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-    crossorigin="anonymous"></script>
+  integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+  crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.10/dist/sweetalert2.all.min.js"
-    integrity="sha256-hw7v8jZF/rFEdx1ZHepT4D73AFTHLu/P9kEyrNesRyc=" crossorigin="anonymous"></script>
-
+  integrity="sha256-hw7v8jZF/rFEdx1ZHepT4D73AFTHLu/P9kEyrNesRyc=" crossorigin="anonymous"></script>
+  
   <script src="app/App.js" type="module"></script>
+  <!-- #endregion -->
+
 </body>
 
 </html>
