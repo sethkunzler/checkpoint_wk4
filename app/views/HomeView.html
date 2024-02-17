@@ -1,27 +1,33 @@
-<header class="m-0 p-0">
-  <nav class=" m-0 p-0 text-light d-flex justify-content-between text-align-center">
-    <div class="m-0">
-      <p class="misty py-6 px-4" >
-        <span role="button" class="selectable rounded fs-5 p-1" title="click to copy the image source link">Author of the Image</span> 
-        <br><span roll="button" class="selectable rounded p-2 small" title="click to change background">>> New Background Image</span>
+
+<div class="container d-flex flex-column justify-content-between">
+  <div class="row mt-3 justify-content-between align-items-center">
+    <div class="col-6 col-md-3">
+      <p class="text-center text-align-center  misty selectable fs-5" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">>> 3 Todos remaining</p>
+    </div>
+    <div class="col-6 col-md-3">
+      <p class="text-center misty">
+        <span role="button" class="selectable rounded fs-5" title="click to copy the image source link">Author of the Image</span> 
+        <br><span roll="button" class="selectable rounded small" title="click to change background">>> New Background Image</span>
       </p>
     </div>
-    <div class="misty selectable">
-      <p class="align-bottom fs-5 pt-2">>> 3 Todos remaining</p>
-    </div>
-  </nav>
-</header>
-
-<main class="p-2 bg-light">
-  <div class="container misty align-items-end">
-    <div class="row p-2 bg-dark">
-      <div class="col-10 col-md-8 p-2 bg-light d-flex flex-grow-1 align-items-end"> 
-        <div class="misty">
-          <p>A lovely Quote</p>
-          <p>- Author</p>
-        </div>
-      </div>
+  </div>
+  <div class="row mt-auto justify-content-center">
+    <div class="col-8 misty">
+      <p class="text-center">"A lovely quote by someone important is a treasure to the soul"</p>
+    <p class="text-end me-5">~ <i>Author's Name</i></p>
     </div>
   </div>
+</div>
 
-</main>
+<div class="misty m-3 offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasScrollingLabel">My To Do's list</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <p>a simple task</p>
+    <p>a simple task</p>
+    <p>a simple task</p>
+    <p>a simple task</p>
+  </div>
+</div>

@@ -16,33 +16,34 @@
 </head>
 
 <body>
-
-  <section id="router-view" class="router-view">
+  <section class="d-flex flex-grow-1">
+    <div id="router-view" class="router-view d-flex flex-grow-1 flex-columns">
       <!-- primary viewport -->
+    </div>
   </section>
 
-  <footer class="misty text-light text-shadow">
+  <footer class="misty m-3 text-light text-shadow">
     <div class="container">
       <div class="row mb-1 d-flex justify-content-between text-center align-items-center">
-        <div class="col-md-4">
-          <div role="button" id="weatherObject" class="selectable rounded d-flex align-items-center">
-            <div class="p-2 align-items-center p-2">
-              <p class="mb-0">Sunny</p>
-              <p>37° C</p>
-            </div>
-            <span class="mdi mdi-white-balance-sunny display-4"></span>
-          </div>
+        <div class="col-md-4 d-flex align-items-center justify-content-between">
+          <div class="justify-content-end align-items-center d-flex" id="authstate"></div>
+          <a href="#/profile" class="selectable rounded p-3 text-light">
+            <span role="link" class="mdi mdi-tune-variant display-5" title="User Settings"></span>
+          </a>
         </div>
         <div id="timeObject" class="col-md-4 selectable rounded" role="button">
           <h1 class="p-1">24:60:60 p.m.</h1>
           <p>Location</p>
         </div>
-        <div class="col-md-4 d-flex align-items-center justify-content-between">
-          <a href="#/profile" class="selectable rounded p-3 text-light">
-            <span role="link" class="mdi mdi-tune-variant display-5" title="User Settings"></span>
-          </a>
-          <div class="justify-content-end align-items-center d-flex" id="authstate"></div>
-        </div>
+        <div class="col-md-4">
+          <div role="button" id="weatherObject" class="selectable rounded d-flex justify-content-center align-items-center">
+            <div class="p-3">
+              <p class="mb-0">Sunny</p>
+              <p class="text-center">37° C</p>
+            </div>
+            <span class="mdi mdi-white-balance-sunny display-4"></span>
+          </div>
+        </div>        
       </div>
     </div>
   </footer>
