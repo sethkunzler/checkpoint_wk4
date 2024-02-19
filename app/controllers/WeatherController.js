@@ -1,5 +1,6 @@
 import { AppState } from "../AppState.js";
 import { weatherService } from "../services/WeatherService.js";
+import { EventEmitter } from "../utils/EventEmitter.js";
 import { Pop } from "../utils/Pop.js";
 import { setHTML } from "../utils/Writer.js";
 
@@ -25,5 +26,9 @@ export class WeatherController {
       Pop.error(error)
       console.error(error);
     }
+  }
+  adjustTempDisplay() {
+    weatherService.adjustTempDisplay()
+    AppState.emit('weather')
   }
 }

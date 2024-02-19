@@ -4,7 +4,7 @@ Requirements -
 
 ✅Users can Register, login and automatically authenticated on refresh
 
-❌Quote: Quote always displayed and Author reveals on hover
+✅Quote: Quote always displayed and Author reveals on hover
 
 ✅Image: The API must be used to get a random image on reload.
 ✅Image: The image must be large with at least one element positioned over top, without tiling or warping
@@ -22,7 +22,7 @@ Requirements -
 ✅Todo: Completed Todo's have a style indication or checkbox that will persist on reload (hint: checked attribute)
 ✅Todo: Todo's list includes an up to date count of all uncompleted tasks (refresh not required)
 
-❌API Data is retrieved and persisted through the Sandbox API
+✅API Data is retrieved and persisted through the Sandbox API
 
 
 9 Stretch Goals - 
