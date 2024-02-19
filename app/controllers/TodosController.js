@@ -10,6 +10,7 @@ function _drawTodoList() {
   let htmlString = ''
   todos.forEach(todo => htmlString += todo.TodoItemHTMLTemplate)
   setHTML('offcanvasList', htmlString)
+  // FIXME count the uncompleted todos instead  (!)
   const completedTodos = todos.filter(todo => todo.completed)
   setText('myTodos', `${completedTodos.length} / ${todos.length}`)
 }
