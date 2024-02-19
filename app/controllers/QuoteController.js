@@ -4,7 +4,7 @@ import { Pop } from "../utils/Pop.js"
 import { setHTML } from "../utils/Writer.js"
 
 function _drawQuote() {
-  console.log('drawing quote', AppState.quote)
+  // console.log('drawing quote', AppState.quote)
   setHTML('quoteCard', AppState.quote.QuoteCardHTMLTemplate)
 }
 export class QuoteController {
@@ -16,7 +16,7 @@ export class QuoteController {
   async getQuote() {
     try {
       await quoteService.getQuote()
-      console.log('got quote')
+      // console.log('got quote')
     } catch (error) {
       Pop.error(error)
       console.error(error);

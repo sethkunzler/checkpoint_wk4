@@ -6,10 +6,10 @@ class QuoteService {
   
   async getQuote() {
     const response = await api.get('api/quotes')
-    console.log('📡 Quote Data', response.data)
+    // console.log('📡 Quote Data', response.data)
     const newQuote = new Quote(response.data)
     AppState.quote = newQuote
-    console.log('quote changed to', AppState.quote)
+    // console.log('quote changed to', AppState.quote)
   }
 }
 
