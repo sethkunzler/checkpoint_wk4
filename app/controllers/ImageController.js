@@ -14,11 +14,9 @@ function _drawImage() {
 
 export class ImageController {
   constructor() {
-    console.log("Image Constructor")
-
+    // console.log("Image Constructor")
     AppState.on('backgroundImage', _drawImage)
-    AppState.on('account', this.getBackgroundImage)
-    
+    this.getBackgroundImage()
   }
 
   async getBackgroundImage() {

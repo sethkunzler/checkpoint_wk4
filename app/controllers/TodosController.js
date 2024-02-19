@@ -5,20 +5,20 @@ import { Pop } from "../utils/Pop.js";
 import { setHTML, setText } from "../utils/Writer.js";
 
 function _drawTodoList() {
-  console.log('drawing todos')
+  // console.log('drawing todos')
   const todos = AppState.todos
   let htmlString = ''
   todos.forEach(todo => htmlString += todo.TodoItemHTMLTemplate)
   setHTML('offcanvasList', htmlString)
   // FIXME count the uncompleted todos instead  (!)
-  const completedTodos = todos.filter(todo => todo.completed)
-  setText('myTodos', `${completedTodos.length} / ${todos.length}`)
+  const uncompletedTodos = todos.filter(todo => !todo.completed)
+  setText('myTodos', `${uncompletedTodos.length} / ${todos.length}`)
 }
 
 export class TodosController {
 
   constructor() {
-    console.log('Todos Controller Loaded')
+    // console.log('Todos Controller Loaded')
 
     AppState.on('account', this.getTodos)
     AppState.on('todos', _drawTodoList)

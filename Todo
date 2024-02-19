@@ -4,25 +4,25 @@ Requirements -
 
 ✅Users can Register, login and automatically authenticated on refresh
 
-Quote: Quote always displayed and Author reveals on hover
+❌Quote: Quote always displayed and Author reveals on hover
 
 ✅Image: The API must be used to get a random image on reload.
 ✅Image: The image must be large with at least one element positioned over top, without tiling or warping
 
-Weather: The temp is displayed in Fahrenheit/Celsius with a click toggling between
+❌Weather: The temp is displayed in Fahrenheit/Celsius with a click toggling between
 
-Clock: A clock shows the accurate time including at least hour and minutes and updates appropriately
+❌Clock: A clock shows the accurate time including at least hour and minutes and updates appropriately
 
-Todo: When adding a Todo the page does not reload
-Todo: Todo's can be added to a list (POST)
-Todo: Todo's can be removed (DELETE)
-Todo: Todo's can be marked complete (PUT)
-Todo: Deleting a todo requires confirmation
-Todo: Todo's are rendered for the authenticated user
-Todo: Completed Todo's have a style indication or checkbox that will persist on reload (hint: checked attribute)
-Todo: Todo's list includes an up to date count of all uncompleted tasks (refresh not required)
+✅Todo: When adding a Todo the page does not reload
+✅Todo: Todo's can be added to a list (POST)
+✅Todo: Todo's can be removed (DELETE)
+✅Todo: Todo's can be marked complete (PUT)
+✅Todo: Deleting a todo requires confirmation
+✅Todo: Todo's are rendered for the authenticated user
+✅Todo: Completed Todo's have a style indication or checkbox that will persist on reload (hint: checked attribute)
+✅Todo: Todo's list includes an up to date count of all uncompleted tasks (refresh not required)
 
-API Data is retrieved and persisted through the Sandbox API
+❌API Data is retrieved and persisted through the Sandbox API
 
 
 9 Stretch Goals - 
