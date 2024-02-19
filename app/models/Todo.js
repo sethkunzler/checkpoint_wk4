@@ -8,13 +8,19 @@ export class Todo {
 
   get TodoItemHTMLTemplate() {
     return /*html*/ `
-    <div class="mb-2">
-      <div onclick="app.TodosController.completeTask('${this.id}')" class="d-flex">
-        ${this.CompletedCheckbox}
-        <p class="${this.CompletedStyle}">${this.description}</p>
+      <div class="row my-2 align-items-center">
+        <div class="col-2">
+          ${this.CompletedCheckbox}
+        </div>
+        <div class="col-8">   
+          <p onclick="app.TodosController.completeTask('${this.id}')"  class="${this.CompletedStyle} selectable rounded p-2 text-align-end mb-0">
+            ${this.description}
+          </p>
+        </div>
+        <div class="col-2">
+          <span onclick="app.TodosController.removeTask('${this.id}')" class="btn btn-danger mdi mdi-delete"></span>
+        </div>
       </div>
-      <p onclick="app.TodosController.removeTask('${this.id}')" class="d-flex mdi mdi-trash">X</p>
-    </div>
     `
   }
   get CompletedCheckbox() {

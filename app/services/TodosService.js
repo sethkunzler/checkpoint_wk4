@@ -9,7 +9,12 @@ class TodosService {
     const newTodos = response.data.map(todoPOJO => new Todo(todoPOJO))
     AppState.todos = newTodos
   }
-
+  async createNewTodo(formData) {
+    const response = await api.post('api/todos', formData)
+    const newTodo = new Todo(response.data)
+    console.log('new todo', newTodo);
+    AppState.todos.push(newTodo)
+  }
 }
 
 export const todosService = new TodosService
