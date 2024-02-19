@@ -1,3 +1,5 @@
+import { AppState } from "../AppState.js"
+
 export class Todo {
   constructor(data) {
     this.description = data.description
@@ -5,7 +7,6 @@ export class Todo {
     this.completed = data.completed
     this.creatorId = data.creatorId
   }
-
   get TodoItemHTMLTemplate() {
     return /*html*/ `
       <div class="row my-2 align-items-center">

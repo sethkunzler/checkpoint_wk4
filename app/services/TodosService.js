@@ -19,10 +19,21 @@ class TodosService {
     const response = await api.delete(`api/todos/${todoId}`)
     const todoIndex = AppState.todos.findIndex(todo => todo.id == todoId)
     if (todoIndex == -1) {
-      throw new Error("Index was -1, could not find 'todoIndex' on the todos array")
+      throw new Error("Index was -1, could not find 'todoIndex' on the todos array - remove task")
     }
     AppState.todos.splice(todoIndex, 1)
 
+  }
+  async completeTask(todoId) {
+    const todoIndex = AppState.todos.findIndex(todo => todo.id == todoId)
+    if (todoIndex == -1) {
+      throw new Error("Index was -1, could not find 'todoIndex' on the todos array - complete task")
+    }
+    const foundTodo = AppState.todos[todoIndex]
+    const todoUpdateData = {completed: !foundTodo.completed}
+    const response = await api.put(`api/todos/${todoId}`, todoUpdateData)
+    const updatedTodo = new Todo(response.data)
+    AppState.todos.splice(todoIndex, 1, updatedTodo)
   }
 }
 

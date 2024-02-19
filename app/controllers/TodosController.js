@@ -2,7 +2,7 @@ import { AppState } from "../AppState.js"
 import { todosService } from "../services/TodosService.js";
 import { getFormData } from "../utils/FormHandler.js";
 import { Pop } from "../utils/Pop.js";
-import { setHTML } from "../utils/Writer.js";
+import { setHTML, setText } from "../utils/Writer.js";
 
 function _drawTodoList() {
   console.log('drawing todos')
@@ -10,6 +10,8 @@ function _drawTodoList() {
   let htmlString = ''
   todos.forEach(todo => htmlString += todo.TodoItemHTMLTemplate)
   setHTML('offcanvasList', htmlString)
+  const completedTodos = todos.filter(todo => todo.completed)
+  setText('myTodos', `${completedTodos.length} / ${todos.length}`)
 }
 
 export class TodosController {
@@ -56,7 +58,15 @@ export class TodosController {
       console.error(error);
     }
   }
-  completeTask() {}
+  async completeTask(todoId) {
+    try {
+      await todosService.completeTask(todoId)
+    } catch (error) {      
+      Pop.error(error)
+      console.error(error);
+    }
+
+  }
 }
 
 
