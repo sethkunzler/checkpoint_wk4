@@ -1,7 +1,6 @@
 import { AppState } from "../AppState.js"
 import { BackgroundImage } from "../models/BackgroundImage.js"
 import { api } from "./AxiosService.js"
-
 class ImageService {
   
   async getBackgroundImage() {

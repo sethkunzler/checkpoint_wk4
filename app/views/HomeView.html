@@ -2,11 +2,11 @@
 <div class="container d-flex flex-column justify-content-between">
   <div class="row mt-3 justify-content-between align-items-center">
     <div class="col-6 col-md-3">
-      <p class="text-center text-align-center  misty selectable fs-5" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">>> Remaining Todos: <span id="myTodos">0/0</span></p>
+      <p class="text-center text-align-center  misty selectable fs-5" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">>> Remaining Tasks: <span id="myTodos">0/0</span></p>
     </div>
-    <div class="col-6 col-md-3">
+    <div id="imageInfoObject" class="col-6 col-md-3">
       <p class="text-center misty hidden-card">
-        <span id="Image Author" role="button" class="selectable rounded fs-5" title="click to copy the image source link">Author of the Image</span> 
+        <span id="Image Author" role="button" class="selectable rounded fs-5" title="Photagrapher">Author of the Image</span> 
         <br><span onclick="app.ImageController.getBackgroundImage()" roll="button" class="selectable rounded small hidden" title="click to change background">>> New Background Image</span>
       </p>
     </div>
