@@ -1,11 +1,10 @@
 import { AppState } from "../AppState.js";
-import { Weather } from "../models/Weather.js";
 import { weatherService } from "../services/WeatherService.js";
 import { Pop } from "../utils/Pop.js";
 import { setHTML } from "../utils/Writer.js";
 
 function _drawWeather() {
-  console.log(AppState.weather)
+  // console.log("weather on AppState", AppState.weather)
   setHTML('weatherObject', AppState.weather.WeatherInfoHTMLTemplate)
 }
 function _drawTime() {
@@ -21,7 +20,7 @@ export class WeatherController {
   async getWeatherInfo() {
     try {
       await weatherService.getWeatherInfo()
-      console.log("got weather")
+      // console.log("got weather info")
     } catch (error) {
       Pop.error(error)
       console.error(error);

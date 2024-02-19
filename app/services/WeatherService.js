@@ -5,7 +5,7 @@ import { api } from "./AxiosService.js"
 class WeatherService {
   async getWeatherInfo() {
     const response = await api.get('api/weather')
-    console.log('📡 weather data', response.data)
+    // console.log('📡 weather data', response.data)
     const newWeather = new Weather(response.data)
     AppState.weather = newWeather
   }

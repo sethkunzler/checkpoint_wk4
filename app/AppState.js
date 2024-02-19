@@ -1,4 +1,5 @@
 import { BackgroundImage } from "./models/BackgroundImage.js"
+import { Quote } from "./models/Quote.js"
 import { Todo } from "./models/Todo.js"
 import { Weather } from "./models/Weather.js"
 import { EventEmitter } from './utils/EventEmitter.js'
@@ -18,6 +19,9 @@ class ObservableAppState extends EventEmitter {
   
   /**@type {Weather | null} */
   weather = null
+  
+  /**@type {Quote | null} */
+  quote = null 
 
 }
 
