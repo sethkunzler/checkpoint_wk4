@@ -22,3 +22,9 @@ body {
     backdrop-filter: blur(10px);
   }
 }
+
+.completed {
+  color: gray; 
+  text-decoration: line-through;
+  text-shadow: none;
+}

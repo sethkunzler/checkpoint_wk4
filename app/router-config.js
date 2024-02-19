@@ -1,5 +1,6 @@
 import { AccountController } from "./controllers/AccountController.js";
 import { ImageController } from "./controllers/ImageController.js";
+import { TodosController } from "./controllers/TodosController.js";
 import { AuthGuard } from "./services/AuthService.js";
 import { Router } from "./utils/Router.js";
 
@@ -7,7 +8,7 @@ import { Router } from "./utils/Router.js";
 export const router = new Router([
   {
     path: '',
-    controllers: [ImageController],
+    controllers: [ImageController, TodosController],
     view: `app/views/HomeView.html`
   },
   {

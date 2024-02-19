@@ -1,0 +1,46 @@
+My Todo List:
+
+Requirements -
+
+✅Users can Register, login and automatically authenticated on refresh
+
+Quote: Quote always displayed and Author reveals on hover
+
+✅Image: The API must be used to get a random image on reload.
+✅Image: The image must be large with at least one element positioned over top, without tiling or warping
+
+Weather: The temp is displayed in Fahrenheit/Celsius with a click toggling between
+
+Clock: A clock shows the accurate time including at least hour and minutes and updates appropriately
+
+Todo: When adding a Todo the page does not reload
+Todo: Todo's can be added to a list (POST)
+Todo: Todo's can be removed (DELETE)
+Todo: Todo's can be marked complete (PUT)
+Todo: Deleting a todo requires confirmation
+Todo: Todo's are rendered for the authenticated user
+Todo: Completed Todo's have a style indication or checkbox that will persist on reload (hint: checked attribute)
+Todo: Todo's list includes an up to date count of all uncompleted tasks (refresh not required)
+
+API Data is retrieved and persisted through the Sandbox API
+
+
+9 Stretch Goals - 
+
+Allow the user to set their name and have it save to localStorage
+
+Change the message from Good Morning to Good Afternoon, Evening as appropriate
+
+Allow the user to toggle the clock from, 12hr to 24hr
+
+Include an Icon to show what the weather is sunny/cloudy/rainy hint look at the weather data
+
+Add a button to cycle to next quote/picture
+
+Add a settings so user can change to a new 'theme' (font, background colors, etc.)
+
+Clicking the weather should let the user toggle between Celsius, Fahrenheit, and Kelvin
+
+If you think through some of the actions being performed you might find a way to optimize the list by only updating the one todo that changes at a time
+
+Every time you update a todo you shouldn't have to re-get the entire list you already know what changed about the one todo

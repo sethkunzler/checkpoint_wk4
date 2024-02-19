@@ -10,6 +10,9 @@ class ObservableAppState extends EventEmitter {
 
   /**@type {BackgroundImage | null} */
   backgroundImage = null
+  
+  /**@type {Todo[]} */
+  todos = []
 }
 
 export const AppState = createObservableProxy(new ObservableAppState())
