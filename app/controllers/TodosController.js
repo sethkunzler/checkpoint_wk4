@@ -1,14 +1,34 @@
+import { AppState } from "../AppState.js"
+import { todosService } from "../services/TodosService.js";
+import { Pop } from "../utils/Pop.js";
+import { setHTML } from "../utils/Writer.js";
 
 function _drawTodoList() {
   console.log('drawing todos')
+  const todos = AppState.todos
+  let htmlString = ''
+  todos.forEach(todo => htmlString += todo.TodoItemHTMLTemplate)
+  setHTML('offcanvasList', htmlString)
 }
 
 export class TodosController {
 
   constructor() {
     console.log('Todos Controller Loaded')
+
+    AppState.on('account', this.getTodos)
+    AppState.on('todos', _drawTodoList)
+
   }
 
+  async getTodos() {
+    try {
+      await todosService.getTodos()
+    } catch (error) {
+      Pop.error(error)
+      console.error(error);
+    }
+  }
   completeTask() {}
   removeTask() {}
 }
