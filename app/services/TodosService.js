@@ -15,6 +15,15 @@ class TodosService {
     console.log('new todo', newTodo);
     AppState.todos.push(newTodo)
   }
+  async removeTask(todoId) {
+    const response = await api.delete(`api/todos/${todoId}`)
+    const todoIndex = AppState.todos.findIndex(todo => todo.id == todoId)
+    if (todoIndex == -1) {
+      throw new Error("Index was -1, could not find 'todoIndex' on the todos array")
+    }
+    AppState.todos.splice(todoIndex, 1)
+
+  }
 }
 
 export const todosService = new TodosService

@@ -44,8 +44,19 @@ export class TodosController {
       Pop.error(error)
     }
   }
+  async removeTask(todoId) {
+    try {
+      const wantsToRemove = await Pop.confirm("Are you sure you want to remove this task? action cannot be undone")
+      if (!wantsToRemove) {
+        return
+      }
+      await todosService.removeTask(todoId)
+    } catch (error) {
+      Pop.error(error)
+      console.error(error);
+    }
+  }
   completeTask() {}
-  removeTask() {}
 }
 
 
