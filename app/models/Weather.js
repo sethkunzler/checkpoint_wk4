@@ -4,10 +4,9 @@ export class Weather {
   // TODO do your calculations here to save farenheit/celsius
     this.main = data.main
     this.weather = data.weather
-    this.time = new Date()
     // TODO create a boolean property on your class that will keep track of wether you want to display farenheit/celsius, give it a default boolean value
   }
-
+  
   get WeatherInfoHTMLTemplate() {
     // TODO have a button here that will toggle boolean status between false and true, write a getter to display farenheit temp or celsius temp based on the boolean stored on this class
     return /*html*/ `
@@ -20,9 +19,12 @@ export class Weather {
   }
   get TimeInfoHTMLTemplate() {
     return /*html*/ `
-      <h1 class="p-1">${this.time.toLocaleTimeString()}</h1>
+      <h1 class="p-1">${this.CurrentTime.toLocaleTimeString()}</h1>
       <p>${this.name}</p>
     `
+  }
+  get CurrentTime() {
+    return new Date()
   }
 }
 

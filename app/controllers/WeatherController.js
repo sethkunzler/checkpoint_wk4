@@ -13,16 +13,11 @@ function _drawTime() {
 }
 export class WeatherController {
   constructor() {
-    console.log('weather controller loaded') 
+    // console.log('weather controller loaded') 
     AppState.on('weather', _drawWeather)
-    AppState.on('weather', _drawTime)
     this.getWeatherInfo()
-
+    setInterval(_drawTime, 1000)
   }
-
-  // FIXME start this interval on page load, and your callback function should grab the current date/time, and either update your model and trigger a draw (emit), or set the HTML directly to the current date/time
-  // FIXME do not call to the api every second!
-  // setInterval(this.getWeatherInfo, 1000)
   async getWeatherInfo() {
     try {
       await weatherService.getWeatherInfo()

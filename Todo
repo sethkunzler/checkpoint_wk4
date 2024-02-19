@@ -11,7 +11,7 @@ Requirements -
 
 ❌Weather: The temp is displayed in Fahrenheit/Celsius with a click toggling between
 
-❌Clock: A clock shows the accurate time including at least hour and minutes and updates appropriately
+✅Clock: A clock shows the accurate time including at least hour and minutes and updates appropriately
 
 ✅Todo: When adding a Todo the page does not reload
 ✅Todo: Todo's can be added to a list (POST)
